@@ -373,15 +373,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap2010:Annotation.AnnotationText="Main steps in process." DisplayName="Process" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap2010:Annotation.AnnotationText="Main steps in process." DisplayName="Process" sap:VirtualizedContainerService.HintSize="563.2,1473.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - 4" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_21">
+                <ui:LogMessage DisplayName="Log Message - 4" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_21">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
                       <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -393,7 +393,7 @@
                     </InArgument>
                   </ui:LogMessage.Message>
                 </ui:LogMessage>
-                <Sequence sap2010:Annotation.AnnotationText="Prepare for process." DisplayName="Init" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap2010:Annotation.AnnotationText="Prepare for process." DisplayName="Init" sap:VirtualizedContainerService.HintSize="500.8,88" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -422,7 +422,7 @@
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\MainSteps.xaml - Process" sap:VirtualizedContainerService.HintSize="449.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Workflows\\MainSteps.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\MainSteps.xaml - Process" sap:VirtualizedContainerService.HintSize="500.8,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Workflows\\MainSteps.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Config">
                       <CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_167">Config</CSharpValue>
@@ -435,19 +435,19 @@
                     </OutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <Sequence sap2010:Annotation.AnnotationText="Add new record to Excel report." DisplayName="ExcelReportProcess - Process" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence sap2010:Annotation.AnnotationText="Add new record to Excel report." DisplayName="ExcelReportProcess - Process" sap:VirtualizedContainerService.HintSize="500.8,780" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="strDateEnd" />
                     <Variable x:TypeArguments="s:String[]" Name="arrNewRecord" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign - strDateEnd - Process" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign DisplayName="Assign - strDateEnd - Process" sap:VirtualizedContainerService.HintSize="438.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">strDateEnd</CSharpReference>
@@ -459,7 +459,7 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign DisplayName="Assign - arrNewRecord - Process" sap:VirtualizedContainerService.HintSize="433.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign DisplayName="Assign - arrNewRecord - Process" sap:VirtualizedContainerService.HintSize="438.4,115.2" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:String[]">
                         <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">arrNewRecord</CSharpReference>
@@ -479,16 +479,16 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <TryCatch sap2010:Annotation.AnnotationText="Try to add a record to Excel report file for Business." DisplayName="Try Catch - Workflows\\Excel\\ExcelReportProcess.xaml - Process" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                  <TryCatch sap2010:Annotation.AnnotationText="Try to add a record to Excel report file for Business." DisplayName="Try Catch - Workflows\\Excel\\ExcelReportProcess.xaml - Process" sap:VirtualizedContainerService.HintSize="438.4,399.2" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelReportProcess.xaml - Process" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelReportProcess.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelReportProcess.xaml - Process" sap:VirtualizedContainerService.HintSize="340,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelReportProcess.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">1</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="strTempExcelPath">
@@ -520,10 +520,10 @@
                       </ui:InvokeWorkflowFile>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400.8,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -543,7 +543,7 @@
                     </TryCatch.Catches>
                   </TryCatch>
                 </Sequence>
-                <ui:LogMessage DisplayName="Log Message - 6" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                <ui:LogMessage DisplayName="Log Message - 6" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
                       <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -558,7 +558,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="419.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="566.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -569,15 +569,15 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="BE error handler." DisplayName="Error Handler - BE" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence sap2010:Annotation.AnnotationText="BE error handler." DisplayName="Error Handler - BE" sap:VirtualizedContainerService.HintSize="657.6,2117.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message - 7" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+                    <ui:LogMessage DisplayName="Log Message - 7" sap:VirtualizedContainerService.HintSize="595.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3">
                       <ui:LogMessage.Level>
                         <InArgument x:TypeArguments="ui:LogLevel">
                           <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
@@ -589,14 +589,14 @@
                         </InArgument>
                       </ui:LogMessage.Message>
                     </ui:LogMessage>
-                    <ui:LogMessage DisplayName="Log Message - 8" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Error">
+                    <ui:LogMessage DisplayName="Log Message - 8" sap:VirtualizedContainerService.HintSize="595.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Error">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_211">"=&gt;Error: " + exception.Message + Environment.NewLine + "=&gt;At: " + exception.Source + "."</CSharpValue>
                         </InArgument>
                       </ui:LogMessage.Message>
                     </ui:LogMessage>
-                    <Sequence sap2010:Annotation.AnnotationText="Add new record to Excel report." DisplayName="ExcelReportProcess - BE" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence sap2010:Annotation.AnnotationText="Add new record to Excel report." DisplayName="ExcelReportProcess - BE" sap:VirtualizedContainerService.HintSize="595.2,88" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strDateEnd_BE" />
                         <Variable x:TypeArguments="s:String[]" Name="arrNewRecord_BE" />
@@ -663,12 +663,8 @@
                         <TryCatch.Try>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelReportProcess.xaml - BE" sap:VirtualizedContainerService.HintSize="340,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelReportProcess.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">
-                                <Literal x:TypeArguments="x:Int32" Value="1" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:Boolean" x:Key="boolUseOutsideReport">
-                                <Literal x:TypeArguments="x:Boolean" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">1</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="boolUseOutsideReport">False</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="strTempExcelPath">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_204">Config["ExcelReportTempPath"].ToString()</CSharpValue>
                               </InArgument>
@@ -684,18 +680,10 @@
                               <InArgument x:TypeArguments="s:String[]" x:Key="arrNewRecord_1">
                                 <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_215">arrNewRecord_BE</CSharpValue>
                               </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strIDToFind_2">
-                                <Literal x:TypeArguments="x:String">1</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strIDColumnName_2">
-                                <Literal x:TypeArguments="x:String">ID</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strValueToUpdate_2">
-                                <Literal x:TypeArguments="x:String">Test123</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strValueColumnName_2">
-                                <Literal x:TypeArguments="x:String">NIP</Literal>
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strIDToFind_2">1</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strIDColumnName_2">ID</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strValueToUpdate_2">Test123</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strValueColumnName_2">NIP</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="strCellAddressToUpdate_2">
                                 <Literal x:TypeArguments="x:String" Value="" />
                               </InArgument>
@@ -732,7 +720,7 @@
                         </TryCatch.Catches>
                       </TryCatch>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Send E-mail to business." DisplayName="SendEmail - BE" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence sap2010:Annotation.AnnotationText="Send E-mail to business." DisplayName="SendEmail - BE" sap:VirtualizedContainerService.HintSize="595.2,1395.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="strEmailSignature_BE" />
                         <Variable x:TypeArguments="x:String" Name="strBENumber" />
@@ -743,12 +731,12 @@
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign - strBENumber" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign DisplayName="Assign - strBENumber" sap:VirtualizedContainerService.HintSize="532.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_15">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">
                             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">strBENumber</CSharpReference>
@@ -760,7 +748,7 @@
                           </InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign DisplayName="Assign - strEmailSignature_BE" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign DisplayName="Assign - strEmailSignature_BE" sap:VirtualizedContainerService.HintSize="532.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">
                             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">strEmailSignature_BE</CSharpReference>
@@ -772,7 +760,7 @@
                           </InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign DisplayName="Assign - listEmailAttachment" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_29">
+                      <Assign DisplayName="Assign - listEmailAttachment" sap:VirtualizedContainerService.HintSize="532.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_29">
                         <Assign.To>
                           <OutArgument x:TypeArguments="scg:List(x:String)">
                             <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_50">listEmailAttachment</CSharpReference>
@@ -784,7 +772,7 @@
                           </InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Based on Business Exception number, send E-mail to business." DisplayName="Switch - strBENumber" sap:VirtualizedContainerService.HintSize="433.6,116.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Based on Business Exception number, send E-mail to business." DisplayName="Switch - strBENumber" sap:VirtualizedContainerService.HintSize="532.8,116.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                         <Switch.Default>
                           <ui:LogMessage DisplayName="Log Message - 10" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Error">
                             <ui:LogMessage.Message>
@@ -857,7 +845,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:MultipleAssign>
                       </Switch>
-                      <If sap2010:Annotation.AnnotationText="BE 1?" DisplayName="If - BE01" sap:VirtualizedContainerService.HintSize="433.6,79.2" sap2010:WorkflowViewState.IdRef="If_8">
+                      <If sap2010:Annotation.AnnotationText="BE 1?" DisplayName="If - BE01" sap:VirtualizedContainerService.HintSize="532.8,785.6" sap2010:WorkflowViewState.IdRef="If_8">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_357">(strBENumber == "BE01")</CSharpValue>
@@ -866,29 +854,31 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="499.2,488" sap2010:WorkflowViewState.IdRef="Sequence_27">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch sap2010:Annotation.AnnotationText="Try to send E-mail to business." DisplayName="Try Catch - OutlookSendEmail.xaml - BEXX" sap:VirtualizedContainerService.HintSize="353.6,79.2" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+                            <TryCatch sap2010:Annotation.AnnotationText="Try to send E-mail to business." DisplayName="Try Catch - OutlookSendEmail.xaml - BEXX" sap:VirtualizedContainerService.HintSize="436.8,399.2" sap2010:WorkflowViewState.IdRef="TryCatch_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <TryCatch.Try>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Outlook\\OutlookSendEmail.xaml - BEXX" sap:VirtualizedContainerService.HintSize="337.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Workflows\\Outlook\\OutlookSendEmail.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="intSMTP_1_Exchange_2_OutlookApp_3">2</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="intSMTP_1_Exchange_2_Outlook_3">
+                                      <Literal x:TypeArguments="x:Int32" Value="2" />
+                                    </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="strEmailTO">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_367">strEmailTO</CSharpValue>
                                     </InArgument>
@@ -907,21 +897,27 @@
                                     <InArgument x:TypeArguments="scg:List(x:String)" x:Key="listAttachmentList">
                                       <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_364">listEmailAttachment</CSharpValue>
                                     </InArgument>
-                                    <InArgument x:TypeArguments="x:Boolean" x:Key="boolIsBodyHTML">True</InArgument>
+                                    <InArgument x:TypeArguments="x:Boolean" x:Key="boolIsBodyHTML">
+                                      <Literal x:TypeArguments="x:Boolean" Value="True" />
+                                    </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="strEmailCredName_12">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_363">Config["OutlookCredName"].ToString()</CSharpValue>
                                     </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="strEmailCredFolder_12">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_362">Config["OrchestratorQueueFolder"].ToString()</CSharpValue>
                                     </InArgument>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="intEmailPort_1">587</InArgument>
+                                    <InArgument x:TypeArguments="x:Int32" x:Key="intEmailPort_1">
+                                      <Literal x:TypeArguments="x:Int32" Value="587" />
+                                    </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="strEmailDomain_2">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_361">Config["OutlookDomain"].ToString()</CSharpValue>
                                     </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="strEmailServer_12">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_360">Config["OutlookServer"].ToString()</CSharpValue>
                                     </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="strEmailAccount_3">piotr.gajewskirpa@gmail.com</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="strEmailAccount_3">
+                                      <Literal x:TypeArguments="x:String">piotr.gajewskirpa@gmail.com</Literal>
+                                    </InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="strEmailDisplayName_12">
                                       <Literal x:TypeArguments="x:String" Value="" />
                                     </InArgument>
@@ -934,15 +930,17 @@
                                     <InArgument x:TypeArguments="x:Int32" x:Key="intGetCredTOms">
                                       <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_358">Int32.Parse(jsonConfig["TOms"]["Medium"].ToString())</CSharpValue>
                                     </InArgument>
-                                    <InArgument x:TypeArguments="x:TimeSpan" x:Key="tsDelAfterSend">00:00:03</InArgument>
+                                    <InArgument x:TypeArguments="x:TimeSpan" x:Key="tsDelAfterSend">
+                                      <Literal x:TypeArguments="x:TimeSpan" Value="00:00:03" />
+                                    </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                               </TryCatch.Try>
                               <TryCatch.Catches>
-                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_15">
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_15">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -974,7 +972,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <ui:LogMessage DisplayName="Log Message - 12" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                    <ui:LogMessage DisplayName="Log Message - 12" sap:VirtualizedContainerService.HintSize="595.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4">
                       <ui:LogMessage.Level>
                         <InArgument x:TypeArguments="ui:LogLevel">
                           <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
@@ -989,7 +987,7 @@
                   </Sequence>
                 </ActivityAction>
               </Catch>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="419.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="566.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1000,7 +998,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="AE error handler." DisplayName="Error Handler - AE" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence sap2010:Annotation.AnnotationText="AE error handler." DisplayName="Error Handler - AE" sap:VirtualizedContainerService.HintSize="416,71.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strFileScreenshotError" />
                     </Sequence.Variables>
@@ -1161,12 +1159,8 @@ Path.Combine(Config["ExScreenshotsFolderPath"].ToString(), strFileScreenshotErro
                         <TryCatch.Try>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelReportProcess.xaml - AE" sap:VirtualizedContainerService.HintSize="340,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelReportProcess.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">
-                                <Literal x:TypeArguments="x:Int32" Value="1" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:Boolean" x:Key="boolUseOutsideReport">
-                                <Literal x:TypeArguments="x:Boolean" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">1</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="boolUseOutsideReport">False</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="strTempExcelPath">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_243">Config["ExcelReportTempPath"].ToString()</CSharpValue>
                               </InArgument>
@@ -1182,18 +1176,10 @@ Path.Combine(Config["ExScreenshotsFolderPath"].ToString(), strFileScreenshotErro
                               <InArgument x:TypeArguments="s:String[]" x:Key="arrNewRecord_1">
                                 <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_239">arrNewRecord_AE</CSharpValue>
                               </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strIDToFind_2">
-                                <Literal x:TypeArguments="x:String">1</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strIDColumnName_2">
-                                <Literal x:TypeArguments="x:String">ID</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strValueToUpdate_2">
-                                <Literal x:TypeArguments="x:String">Test123</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="strValueColumnName_2">
-                                <Literal x:TypeArguments="x:String">NIP</Literal>
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strIDToFind_2">1</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strIDColumnName_2">ID</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strValueToUpdate_2">Test123</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="strValueColumnName_2">NIP</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="strCellAddressToUpdate_2">
                                 <Literal x:TypeArguments="x:String" Value="" />
                               </InArgument>
