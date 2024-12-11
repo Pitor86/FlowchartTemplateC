@@ -127,7 +127,7 @@
       <AssemblyReference>mscorlib</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open needed applications and prepare environment." DisplayName="Open Applications" sap:VirtualizedContainerService.HintSize="988,805.24" sap2010:WorkflowViewState.IdRef="Sequence_43">
+  <Sequence sap2010:Annotation.AnnotationText="Open needed applications and prepare environment." DisplayName="Open Applications" sap:VirtualizedContainerService.HintSize="770.4000000000001,757.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,7 +160,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Open use apps." DisplayName="Open Applications" sap:VirtualizedContainerService.HintSize="449.6,251.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence sap2010:Annotation.AnnotationText="Open use apps." DisplayName="Open Applications &amp; Prepare" sap:VirtualizedContainerService.HintSize="449.6,251.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
