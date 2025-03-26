@@ -136,7 +136,7 @@
       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="[Process_Name]&#xA;[Process description]&#xA;[Author]&#xA;&#xA;To modify:&#xA;- provide process: name, description, author here and in project.json&#xA;- change files names: Data\Config_Process_Name.xlsx, Tests\TS_Process_Name.xlsx to given Process_Name&#xA;- edit Config values and move file to another directory if needed&#xA;- add assets to Orchestrator if needed&#xA;- update packages if needed&#xA;- re-add test data Excel file, to TC workflows if needed&#xA;- adjust 3 variables in 4 Workflows (_Sandbox, FirstRun, TC_ProcessTransaction, TC_SubWorkflowName\Init Configs):&#xA;Assign - in_OrchestratorQueueFolder&#xA;Try Catch - Get Asset - strConfigFilePath\Get Asset - strConfigFilePath&#xA;Try Catch - Get Asset - strConfigFilePath\Assign - strConfigFilePath&#xA;- make sure Orchestrator folder name used in above 4 Workflows in: Assign - in_OrchestratorQueueFolder, equals the one used in Config-Settings_Prod and Config-Settings_Test&#xA;- remove unused imports&#xA;- run analyzer&#xA;- run parse XAML&#xA;- check Project Settings&#xA;- open each file &amp; Workflow for error check&#xA;- remove unnecessary Then-Else sequences&#xA;- change Main Workflow properties name to Process_Name&#xD;&#xA;- remove unused entries in Config&#xD;&#xA;- remove unused Workflows" DisplayName="Process_Name" sap:VirtualizedContainerService.HintSize="867.2,597.6" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart sap2010:Annotation.AnnotationText="[Process_Name]&#xA;[Process description]&#xA;[Author]&#xA;&#xA;To modify:&#xA;- provide process: name, description, author here and in project.json&#xA;- change files names: Data\Config_Process_Name.xlsx, Tests\TS_Process_Name.xlsx to given Process_Name&#xA;- edit Config values and move file to another directory if needed&#xA;- add assets to Orchestrator if needed&#xA;- update packages if needed&#xA;- re-add test data Excel file, to TC workflows if needed&#xA;- adjust 3 variables in 4 Workflows (_Sandbox, FirstRun, TC_ProcessTransaction, TC_SubWorkflowName\Init Configs):&#xA;Assign - in_OrchestratorQueueFolder&#xA;Try Catch - Get Asset - strConfigFilePath\Get Asset - strConfigFilePath&#xA;Try Catch - Get Asset - strConfigFilePath\Assign - strConfigFilePath&#xA;- make sure Orchestrator folder name used in above 4 Workflows in: Assign - in_OrchestratorQueueFolder, equals the one used in Config-Settings_Prod and Config-Settings_Test&#xA;- remove unused imports&#xA;- run analyzer&#xA;- run parse XAML&#xA;- check Project Settings&#xA;- open each file &amp; Workflow for error check&#xA;- remove unnecessary Then-Else sequences&#xA;- change Main Workflow properties name to Process_Name&#xA;- remove unused entries in Config&#xA;- remove unused Workflows" DisplayName="Process_Name" sap:VirtualizedContainerService.HintSize="867.2,597.6" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonConfig" />
@@ -534,8 +534,8 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">270,280</av:Point>
               <av:Size x:Key="ShapeSize">60,60</av:Size>
-              <av:PointCollection x:Key="TrueConnector">270,310 218.4,310 218.4,430.2 245,430.2</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">330,310 385.6,310 385.6,560.2 355.4,560.2</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">270,310 240,310 240,430.2 245,430.2</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">330,310 360,310 360,560.2 355.4,560.2</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -547,7 +547,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300.2,465.4 300.2,525</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Main Loop" sap:VirtualizedContainerService.HintSize="467.2,601.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
+              <Sequence sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Main Loop" sap:VirtualizedContainerService.HintSize="518.4,867.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="TransactionNumber" />
                 </Sequence.Variables>
@@ -557,14 +557,14 @@
                     <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - 4" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info">
+                <ui:LogMessage DisplayName="Log Message - 4" sap:VirtualizedContainerService.HintSize="484.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info">
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_634">"Get the transaction item"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                 </ui:LogMessage>
-                <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, s:String[])" sap2010:Annotation.AnnotationText="Process each transaction." DisplayName="For Each - dictReportName_AppXYAddress" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+                <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, s:String[])" sap2010:Annotation.AnnotationText="Process each transaction." DisplayName="For Each - dictReportName_AppXYAddress" sap:VirtualizedContainerService.HintSize="484.8,352" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, s:String[])">
                       <ActivityAction.Argument>
@@ -689,13 +689,13 @@
                   </ui:ForEach.Values>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ForEach>
-                <Assign DisplayName="Assign - SystemException Consecutive" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_81">
+                <Assign DisplayName="Assign - SystemException Consecutive" sap:VirtualizedContainerService.HintSize="484.8,115.2" sap2010:WorkflowViewState.IdRef="Assign_81">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:Exception">
                       <CSharpReference x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpReference`1_131">SystemException</CSharpReference>
@@ -703,11 +703,13 @@
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="s:Exception">
-                      <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_655">ConsecutiveSystemExceptions &gt; 0 ? new Exception(Config["ExceptionMessage_ConsecutiveErrors"].ToString() + " Consecutive retry number: " + ConsecutiveSystemExceptions.ToString()){Source = "Assign - SystemException Consecutive"} : null</CSharpValue>
+                      <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_656" xml:space="preserve">Int32.Parse(Config["MaxConsecutiveSystemExceptions"].ToString())&gt;0 &amp;&amp; ConsecutiveSystemExceptions &gt;= Int32.Parse(Config["MaxConsecutiveSystemExceptions"].ToString()) ?
+new Exception(Config["ExceptionMessage_ConsecutiveErrors"].ToString() + " Consecutive retry number: " + ConsecutiveSystemExceptions.ToString()){Source = "Assign - SystemException Consecutive"} : 
+null</CSharpValue>
                     </InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:LogMessage DisplayName="Log Message - 5" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Warn">
+                <ui:LogMessage DisplayName="Log Message - 5" sap:VirtualizedContainerService.HintSize="484.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Warn">
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_423">"Process finished due to no more transaction data"</CSharpValue>
