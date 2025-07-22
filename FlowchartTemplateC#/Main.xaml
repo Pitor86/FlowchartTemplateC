@@ -572,8 +572,8 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">270,280</av:Point>
               <av:Size x:Key="ShapeSize">60,60</av:Size>
-              <av:PointCollection x:Key="TrueConnector">270,310 240,310 240,430.2 245,430.2</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">330,310 360,310 360,560.2 355.4,560.2</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">270,310 220.8,310 220.8,430.2 245,430.2</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">330,310 373.6,310 373.6,560.2 355.4,560.2</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
