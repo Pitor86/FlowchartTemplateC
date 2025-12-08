@@ -1,0 +1,6 @@
+{
+  "Name": "Flowchart_Process_Name",
+  "ProjectType": "Process",
+  "Description": "Process description.",
+  "MainFile": "Main.xaml"
+}
