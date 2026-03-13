@@ -158,7 +158,7 @@
       <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Send E-mail with given details.&#xA;smtp.office365.com" DisplayName="OutlookSendEmail" sap:VirtualizedContainerService.HintSize="716.4000000000001,968.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Send E-mail with given details.&#xA;smtp.office365.com&#xD;&#xA;smtp.gmail.com - for SMTP, create 2-way verification and set Application Password in Gmail, before." DisplayName="OutlookSendEmail" sap:VirtualizedContainerService.HintSize="703.6,984.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strLogin" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrPass" />

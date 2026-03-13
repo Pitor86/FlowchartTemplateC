@@ -14,7 +14,9 @@
           },
           "in_EnvironmentProd": {
             "type": "boolean",
-            "description": "Required boolean value. If value is set to:\nTrue (default) - then production settings will be used, \nFalse - then test settings will be used."
+            "description": "Required boolean value. If value is set to:\nTrue (default) - then production settings will be used, \nFalse - then test settings will be used.",
+            "x-default-expression": "False",
+            "default": false
           }
         },
         "required": [

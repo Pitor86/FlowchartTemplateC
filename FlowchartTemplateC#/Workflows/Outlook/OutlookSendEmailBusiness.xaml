@@ -123,7 +123,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OutlookSendEmailBusiness" sap:VirtualizedContainerService.HintSize="837.2,1788" sap2010:WorkflowViewState.IdRef="Sequence_75">
+  <Sequence DisplayName="OutlookSendEmailBusiness" sap:VirtualizedContainerService.HintSize="703.6,1788" sap2010:WorkflowViewState.IdRef="Sequence_75">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,24 +331,24 @@ dtExcelInputFile.AsEnumerable().Any(x =&gt; string.IsNullOrEmpty(x.Field&lt;stri
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="451.2,624" sap2010:WorkflowViewState.IdRef="Sequence_79">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch sap2010:Annotation.AnnotationText="Try to send E-mail to business." DisplayName="Try Catch - Send Email - Business" sap:VirtualizedContainerService.HintSize="417.6,564" sap2010:WorkflowViewState.IdRef="TryCatch_34">
+            <TryCatch sap2010:Annotation.AnnotationText="Try to send E-mail to business." DisplayName="Try Catch - Send Email - Business" sap:VirtualizedContainerService.HintSize="416,79.2" sap2010:WorkflowViewState.IdRef="TryCatch_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Outlook\\OutlookSendEmail.xaml - Business" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_51" UnSafe="False" WorkflowFileName="Workflows\\Outlook\\OutlookSendEmail.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Outlook\\OutlookSendEmail.xaml - Business" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_51" UnSafe="False" WorkflowFileName="Workflows\\Outlook\\OutlookSendEmail.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="intSMTP_1_Exchange_2_Outlook_3">2</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="intSMTP_1_Exchange_2_Outlook_3">1</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailTO">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_646">strEmailTO_Report</CSharpValue>
                     </InArgument>
@@ -419,7 +419,7 @@ dtExcelInputFile.AsEnumerable().Any(x =&gt; string.IsNullOrEmpty(x.Field&lt;stri
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:LogMessage DisplayName="Log Message - 84" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Error">
+                    <ui:LogMessage DisplayName="Log Message - 84" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Error">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_659">"=&gt;Error: " + exception.Message + Environment.NewLine + "=&gt;At: " + exception.Source + "."</CSharpValue>
@@ -430,7 +430,7 @@ dtExcelInputFile.AsEnumerable().Any(x =&gt; string.IsNullOrEmpty(x.Field&lt;stri
                 </Catch>
               </TryCatch.Catches>
               <TryCatch.Finally>
-                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -442,13 +442,13 @@ dtExcelInputFile.AsEnumerable().Any(x =&gt; string.IsNullOrEmpty(x.Field&lt;stri
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="451.2,225.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - 85" sap:VirtualizedContainerService.HintSize="417.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="Info">
+            <ui:LogMessage DisplayName="Log Message - 85" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_660" xml:space="preserve">"Not sending report: " +

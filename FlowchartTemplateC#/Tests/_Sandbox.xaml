@@ -56,6 +56,9 @@
       <x:String>System.Net</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>System.Xml</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -146,9 +149,11 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
       <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
       <AssemblyReference>Microsoft.Office.Interop.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="For Workflows testing." DisplayName="_Sandbox" sap:VirtualizedContainerService.HintSize="762,789.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="For Workflows testing." DisplayName="_Sandbox" sap:VirtualizedContainerService.HintSize="703.6,789.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonConfig" />
