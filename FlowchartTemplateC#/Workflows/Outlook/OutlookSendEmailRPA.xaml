@@ -139,9 +139,9 @@
         <Variable x:TypeArguments="x:String" Name="strEmailSignature_RPA" />
         <Variable x:TypeArguments="x:String" Name="strEmailBody_RPA" />
         <Variable x:TypeArguments="x:String" Name="strEmailSubject_RPA" />
-        <Variable x:TypeArguments="x:String" Name="strEmailAttachment_RPA" />
         <Variable x:TypeArguments="x:String" Name="strEmailTO_RPA" />
         <Variable x:TypeArguments="x:String" Name="strEmailBodyTable" />
+        <Variable x:TypeArguments="scg:List(x:String)" Name="listEmailAttachment_RPA" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -193,19 +193,19 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="Assign - strEmailBodyTable" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_84">
+      <Assign DisplayName="Assign - strEmailBodyTable" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_87">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">
-            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_133">strEmailBodyTable</CSharpReference>
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_136">strEmailBodyTable</CSharpReference>
           </OutArgument>
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_643" xml:space="preserve">Config["EmailBodyTable"].ToString()
-.Replace("&lt;varAppOrBusi&gt;", "aplikacyjny")
-.Replace("&lt;varErrorMsg&gt;", SystemException.Message.Replace("&amp;", "&amp;amp").Replace("&lt;", "&amp;lt").Replace("&gt;", "&amp;gt").Replace(Convert.ToChar(34).ToString(), "&amp;quot") + 
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_650" xml:space="preserve">Config["EmailBodyTable"].ToString()
+.Replace("{{varAppOrBusi}}", "aplikacyjny")
+.Replace("{{varErrorMsg}}", SystemException.Message.Replace("&amp;", "&amp;amp").Replace("&lt;", "&amp;lt ").Replace("&gt;", "&amp;gt").Replace(Convert.ToChar(34).ToString(), "&amp;quot") + 
 (SystemException.InnerException != null ? "&lt;br&gt;" + SystemException.InnerException.Message.Replace("&amp;", "&amp;amp").Replace("&lt;", "&amp;lt").Replace("&gt;", "&amp;gt").Replace(Convert.ToChar(34).ToString(), "&amp;quot") : ""))
-.Replace("&lt;varErrorSource&gt;", SystemException.Source.Replace("&amp;", "&amp;amp").Replace("&lt;", "&amp;lt").Replace("&gt;", "&amp;gt").Replace(Convert.ToChar(34).ToString(), "&amp;quot") + 
+.Replace("{{varErrorSource}}", SystemException.Source.Replace("&amp;", "&amp;amp").Replace("&lt;", "&amp;lt ").Replace("&gt;", "&amp;gt").Replace(Convert.ToChar(34).ToString(), "&amp;quot") + 
 (SystemException.InnerException != null ? "&lt;br&gt;" + SystemException.InnerException.Source.Replace("&amp;", "&amp;amp").Replace("&lt;", "&amp;lt").Replace("&gt;", "&amp;gt").Replace(Convert.ToChar(34).ToString(), "&amp;quot") : ""))</CSharpValue>
           </InArgument>
         </Assign.Value>
@@ -338,15 +338,22 @@
           </Sequence>
         </If.Else>
       </If>
-      <Assign DisplayName="Assign - strEmailAttachment_RPA" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_81">
+      <Assign DisplayName="Assign - listEmailAttachment_RPA" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_88">
         <Assign.To>
-          <OutArgument x:TypeArguments="x:String">
-            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_132">strEmailAttachment_RPA</CSharpReference>
+          <OutArgument x:TypeArguments="scg:List(x:String)">
+            <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_137">listEmailAttachment_RPA</CSharpReference>
           </OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_620">System.IO.Path.GetFullPath(Config["FilePathRobotLogo"].ToString())</CSharpValue>
+          <InArgument x:TypeArguments="scg:List(x:String)">
+            <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_651" xml:space="preserve">(!SystemException.Data.Contains("ScreenshotPath") || (string.IsNullOrEmpty(SystemException.Data["ScreenshotPath"].ToString())) ? 
+new List&lt;string&gt;{
+	System.IO.Path.GetFullPath(Config["FilePathRobotLogo"].ToString())
+} : 
+new List&lt;string&gt;{
+	System.IO.Path.GetFullPath(Config["FilePathRobotLogo"].ToString()),
+	System.IO.Path.GetFullPath(SystemException.Data["ScreenshotPath"].ToString())
+})</CSharpValue>
           </InArgument>
         </Assign.Value>
       </Assign>
@@ -364,24 +371,26 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,624" sap2010:WorkflowViewState.IdRef="Sequence_79">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch sap2010:Annotation.AnnotationText="Try to send E-mail to RPA." DisplayName="Try Catch - Send Email - RPA" sap:VirtualizedContainerService.HintSize="416,79.2" sap2010:WorkflowViewState.IdRef="TryCatch_33">
+            <TryCatch sap2010:Annotation.AnnotationText="Try to send E-mail to RPA." DisplayName="Try Catch - Send Email - RPA" sap:VirtualizedContainerService.HintSize="451.2,564" sap2010:WorkflowViewState.IdRef="TryCatch_33">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Outlook\\OutlookSendEmail.xaml - RPA" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_50" UnSafe="False" WorkflowFileName="Workflows\\Outlook\\OutlookSendEmail.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="intSMTP_1_Exchange_2_Outlook_3">1</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="intSMTP_1_Exchange_2_Outlook_3">
+                      <Literal x:TypeArguments="x:Int32" Value="1" />
+                    </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailTO">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_622">Config["EmailTo_RobotFatal"].ToString()</CSharpValue>
                     </InArgument>
@@ -395,33 +404,41 @@
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_624">strEmailBody_RPA</CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strAttachmentPath">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_625">strEmailAttachment_RPA</CSharpValue>
+                      <Literal x:TypeArguments="x:String" Value="" />
                     </InArgument>
                     <InArgument x:TypeArguments="scg:List(x:String)" x:Key="listAttachmentList">
-                      <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_626">null</CSharpValue>
+                      <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_652">listEmailAttachment_RPA</CSharpValue>
                     </InArgument>
-                    <InArgument x:TypeArguments="x:Boolean" x:Key="boolIsBodyHTML">True</InArgument>
+                    <InArgument x:TypeArguments="x:Boolean" x:Key="boolIsBodyHTML">
+                      <Literal x:TypeArguments="x:Boolean" Value="True" />
+                    </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailCredName_12">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_627">Config["OutlookCredName"].ToString()</CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailCredFolder_12">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_628">Config["OrchestratorQueueFolder"].ToString()</CSharpValue>
                     </InArgument>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="intEmailPort_1">587</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="intEmailPort_1">
+                      <Literal x:TypeArguments="x:Int32" Value="587" />
+                    </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailDomain_2">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_629">Config["OutlookDomain"].ToString()</CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailServer_12">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_630">Config["OutlookServer"].ToString()</CSharpValue>
                     </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="strEmailAccount_3">piotr.gajewskirpa@gmail.com</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="strEmailAccount_3">
+                      <Literal x:TypeArguments="x:String">piotr.gajewskirpa@gmail.com</Literal>
+                    </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailDisplayName_12">
                       <Literal x:TypeArguments="x:String" Value="" />
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="strEmailSendOnBehalf_123">
                       <Literal x:TypeArguments="x:String" Value="" />
                     </InArgument>
-                    <InArgument x:TypeArguments="x:Boolean" x:Key="boolSaveCopyInSentItems_2">False</InArgument>
+                    <InArgument x:TypeArguments="x:Boolean" x:Key="boolSaveCopyInSentItems_2">
+                      <Literal x:TypeArguments="x:Boolean" />
+                    </InArgument>
                     <InArgument x:TypeArguments="x:Int32" x:Key="intSendEmailTOms">
                       <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_631">Int32.Parse(jsonConfig["TOms"]["Medium"].ToString())</CSharpValue>
                     </InArgument>
@@ -452,7 +469,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:LogMessage DisplayName="Log Message - 89" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Error">
+                    <ui:LogMessage DisplayName="Log Message - 89" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Error">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_636">"=&gt;Error: " + exception.Message + Environment.NewLine + "=&gt;At: " + exception.Source + "."</CSharpValue>
@@ -475,13 +492,13 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,225.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - 90" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_64" Level="Info">
+            <ui:LogMessage DisplayName="Log Message - 90" sap:VirtualizedContainerService.HintSize="451.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_64" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_637">"Not sending fatal message: " + "No E-mail address for report provided"</CSharpValue>
