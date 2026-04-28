@@ -120,14 +120,14 @@
       <AssemblyReference>mscorlib</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Run below sequence only at first REF run." DisplayName="First Run" sap:VirtualizedContainerService.HintSize="837.2,1391.2" sap2010:WorkflowViewState.IdRef="Sequence_42">
+  <Sequence sap2010:Annotation.AnnotationText="Run below sequence only at first REF run." DisplayName="First Run" sap:VirtualizedContainerService.HintSize="892.0000000000001,1389.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." DisplayName="If - Config Is Null" sap:VirtualizedContainerService.HintSize="484.8,1336.8" sap2010:WorkflowViewState.IdRef="If_23">
+    <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." DisplayName="If - Config Is Null" sap:VirtualizedContainerService.HintSize="516.8,1335.2" sap2010:WorkflowViewState.IdRef="If_23">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_294">Config == null</CSharpValue>
@@ -141,14 +141,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="First Run - Config" sap:VirtualizedContainerService.HintSize="483.2,1137.6" sap2010:WorkflowViewState.IdRef="Sequence_49">
+        <Sequence DisplayName="First Run - Config" sap:VirtualizedContainerService.HintSize="483.2,1117.6" sap2010:WorkflowViewState.IdRef="Sequence_49">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Init Configs variables." DisplayName="Init Configs" sap:VirtualizedContainerService.HintSize="449.6,92" sap2010:WorkflowViewState.IdRef="Sequence_51">
+          <Sequence sap2010:Annotation.AnnotationText="Init Configs variables." DisplayName="Init Configs" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Sequence_51">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strConfigFilePath" />
             </Sequence.Variables>
@@ -280,21 +280,21 @@
               </ui:DeserializeJson.JsonString>
             </ui:DeserializeJson>
           </Sequence>
-          <ui:LogMessage DisplayName="Log Message - 12" sap:VirtualizedContainerService.HintSize="449.6,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Warn">
+          <ui:LogMessage DisplayName="Log Message - 12" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_304">"Start - " + Config["logF_BusinessProcessName"].ToString() + " =&gt; " + DateTime.Now.ToString("HH:mm:ss tt")</CSharpValue>
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <ui:LogMessage DisplayName="Log Message - 13" sap:VirtualizedContainerService.HintSize="449.6,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info">
+          <ui:LogMessage DisplayName="Log Message - 13" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_305">"The primary screen resolution is: " + System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width.ToString() + " x " + System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height.ToString()</CSharpValue>
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - Win + M" sap:VirtualizedContainerService.HintSize="449.6,169.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="m" KeyModifiers="Win" SendWindowMessages="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - Win + M" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="m" KeyModifiers="Win" SendWindowMessages="True">
             <ui:SendHotkey.DelayBefore>
               <InArgument x:TypeArguments="x:Int32">
                 <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_310">Int32.Parse(jsonConfig["DEL"]["D6"].ToString()) * 1000</CSharpValue>
