@@ -99,7 +99,7 @@
       <AssemblyReference>mscorlib</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Add transaction details to report." DisplayName="ExcelReporting" sap:VirtualizedContainerService.HintSize="837.2,1388" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Add transaction details to report." DisplayName="ExcelReporting" sap:VirtualizedContainerService.HintSize="892.0000000000001,1904" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strDateEnd" />
       <Variable x:TypeArguments="s:String[]" Name="arrNewRecord" />
@@ -110,14 +110,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 55" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 55" sap:VirtualizedContainerService.HintSize="489.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">"Start - Excel Reporting"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <Assign DisplayName="Assign - strDateEnd" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_28">
+    <Assign DisplayName="Assign - strDateEnd" sap:VirtualizedContainerService.HintSize="489.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_28">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">strDateEnd</CSharpReference>
@@ -129,7 +129,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Set variables based on end Transaction status." DisplayName="Switch - intSuccess_0_BE_1_AE_2" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+    <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Set variables based on end Transaction status." DisplayName="Switch - intSuccess_0_BE_1_AE_2" sap:VirtualizedContainerService.HintSize="489.6,100.8" sap2010:WorkflowViewState.IdRef="Switch`1_3">
       <Switch.Default>
         <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
@@ -285,7 +285,7 @@
         </Assign>
       </Sequence>
     </Switch>
-    <Sequence sap2010:Annotation.AnnotationText="Add new record to Excel report." DisplayName="ExcelReportProcess" sap:VirtualizedContainerService.HintSize="449.6,731.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <Sequence sap2010:Annotation.AnnotationText="Add new record to Excel report." DisplayName="ExcelReportProcess" sap:VirtualizedContainerService.HintSize="489.6,1295.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -293,7 +293,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap2010:Annotation.AnnotationText="Adding additional data (if requested) to Excel Report Status column, when Unexpected error occurred (AE00)." DisplayName="Assign - Add Extra Info For AE00" sap:VirtualizedContainerService.HintSize="416,235.2" sap2010:WorkflowViewState.IdRef="Assign_31">
+      <Assign sap2010:Annotation.AnnotationText="Adding additional data (if requested) to Excel Report Status column, when Unexpected error occurred (AE00)." DisplayName="Assign - Add Extra Info For AE00" sap:VirtualizedContainerService.HintSize="456,159.2" sap2010:WorkflowViewState.IdRef="Assign_31">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">
             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">arrNewRecord[4]</CSharpReference>
@@ -312,7 +312,7 @@ arrNewRecord[4].ToString().Replace("\n", " ")</CSharpValue>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <ui:LogMessage sap2010:Annotation.AnnotationText="Check which column number from array to take." DisplayName="Log Message - 57" sap:VirtualizedContainerService.HintSize="416,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
+      <ui:LogMessage sap2010:Annotation.AnnotationText="Check which column number from array to take." DisplayName="Log Message - 57" sap:VirtualizedContainerService.HintSize="456,205.6" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_166">"Status for report: " + arrNewRecord[4].ToString()</CSharpValue>
@@ -324,16 +324,16 @@ arrNewRecord[4].ToString().Replace("\n", " ")</CSharpValue>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <TryCatch sap2010:Annotation.AnnotationText="Try to add a record to Excel report file." DisplayName="Try Catch - Workflows\\Excel\\ExcelReportProcess.xaml" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+      <TryCatch sap2010:Annotation.AnnotationText="Try to add a record to Excel report file." DisplayName="Try Catch - Workflows\\Excel\\ExcelGenerateReport.xaml" sap:VirtualizedContainerService.HintSize="456,408" sap2010:WorkflowViewState.IdRef="TryCatch_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelReportProcess.xaml" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelReportProcess.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelGenerateReport.xaml" sap:VirtualizedContainerService.HintSize="339.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelGenerateReport.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">1</InArgument>
               <InArgument x:TypeArguments="x:Boolean" x:Key="boolUseOutsideReport_3">False</InArgument>
@@ -369,7 +369,7 @@ arrNewRecord[4].ToString().Replace("\n", " ")</CSharpValue>
           </ui:InvokeWorkflowFile>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_12">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_12">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -380,7 +380,7 @@ arrNewRecord[4].ToString().Replace("\n", " ")</CSharpValue>
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <ui:LogMessage DisplayName="Log Message - 58" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Error">
+              <ui:LogMessage DisplayName="Log Message - 58" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Error">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">"=&gt;Error: " + exception.Message + Environment.NewLine + "=&gt;At: " + exception.Source + "."</CSharpValue>
@@ -400,16 +400,16 @@ arrNewRecord[4].ToString().Replace("\n", " ")</CSharpValue>
           </Sequence>
         </TryCatch.Finally>
       </TryCatch>
-      <TryCatch sap2010:Annotation.AnnotationText="Try to update cell Status in Excel input file." DisplayName="Try Catch - Workflows\\Excel\\ExcelReportProcess.xaml - Input_File" sap:VirtualizedContainerService.HintSize="416,79.2" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+      <TryCatch sap2010:Annotation.AnnotationText="Try to update cell Status in Excel input file." DisplayName="Try Catch - Workflows\\Excel\\ExcelGenerateReport.xaml - Input_File" sap:VirtualizedContainerService.HintSize="456,399.2" sap2010:WorkflowViewState.IdRef="TryCatch_11">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelReportProcess.xaml - Input_File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelReportProcess.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\\Excel\\ExcelGenerateReport.xaml - Input_File" sap:VirtualizedContainerService.HintSize="335.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Workflows\\Excel\\ExcelGenerateReport.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:Int32" x:Key="intAdd_1_Update_2">2</InArgument>
               <InArgument x:TypeArguments="x:Boolean" x:Key="boolUseOutsideReport_3">True</InArgument>
@@ -483,7 +483,7 @@ arrNewRecord[4].ToString().Replace("\n", " ")</CSharpValue>
         </TryCatch.Finally>
       </TryCatch>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - 60" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Trace">
+    <ui:LogMessage DisplayName="Log Message - 60" sap:VirtualizedContainerService.HintSize="489.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_183">"Stop - Excel Reporting"</CSharpValue>
